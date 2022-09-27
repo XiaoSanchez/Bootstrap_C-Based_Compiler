@@ -11,29 +11,37 @@
  * Copyright (c) 2022 by Shawn C., All Rights Reserved. 
  */
 #include <stdio.h>
-#include <stdlib.h>
-int a[] = {1,9,0,7,8,2,6,3,5,3,4,1,1};
-const int array_size = 13;
-void BubbleSort(int size)
-{
-    int i, j, temp;
-    for (i = 0; i < (size - 1); ++i)
-    {
-        for (j = 0; j < size - 1 - i; ++j )
-        {
-            if (a[j] > a[j+1])
-            {
-                temp = a[j+1];
-                a[j+1] = a[j];
-                a[j] = temp;
-            }
-        }
-    }
+
+int add(int a, int b) {
+    int ret;
+    ret = a + b;
+    return ret;
+}
+int sub(int a, int b) {
+    int ret;
+    ret = a - b;
+    return ret;
+}
+int mult(int a, int b) {
+    int ret;
+    ret = a * b;
+    return ret;
+}
+int div(int a, int b) {
+    int ret;
+    ret = a / b;
+    return ret;
+}
+int mod(int a, int b) {
+    int ret;
+    ret = a % b;
+    return ret;
 }
 int main() {
-    BubbleSort(array_size);
-    for (int i = 0 ; i < array_size; i++) {
-        printf ("%d ", a[i]);
-    }
+    printf("%d + %d = %d\n", 37, 9, add(37, 9));
+    printf("%d - %d = %d\n", 37, 9, sub(37, 9));
+    printf("%d x %d = %d\n", 37, 9, mult(37, 9));
+    printf("%d / %d = %d\n", 37, 9, div(37, 9));
+    printf("%d %% %d = %d\n", 37, 9, mod(37, 9));
     return 0;
 }
