@@ -118,6 +118,15 @@ Here are some related projects
 [C Interpreter 0](https://lotabout.me/2015/write-a-C-interpreter-0/)    
 [Let's Build a Compiler](https://compilers.iecc.com/crenshaw/)
 
+## To Be Fixed
+
+- Fail to bootstrap with gcc. (FIXED)
+
+- Only '*' can be used to declare an array; '[]' will not work. (NOT YET FIXED)
+
+- Classes and tokens declared in comments in the form '/** **/' will still be executed, resulting in an error. (NOT YET FIXED)
+
+- ';' in a for loop will be interpreted as a separate statement, resulting in an error. (NOT YET FIXED)
 
 ## License
 
