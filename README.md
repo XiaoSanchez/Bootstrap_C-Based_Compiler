@@ -104,11 +104,21 @@ Try the following:
   bscp [-d] [filename].c [args to main]
 ```
 Refactoring and Testing:
+macOS || Linux
 ```bash
-  gcc bscp.c -o bscp
-  ./bscp bscp.c
-  ./bscp bscp.c [test].c
+  make
+  ./compile ./test/greeting.c
+  ./compile ./test/bscp.c ./test/greeting.c
 ``` 
+Windows
+```bash
+  make
+``` 
+Execute `Compile.exe`
+```bash
+./test/greeting.c
+./test/bscp.c ./test/greeting.c
+```
 ## Related
 
 Here are some related projects
@@ -118,8 +128,16 @@ Here are some related projects
 [C Interpreter 0](https://lotabout.me/2015/write-a-C-interpreter-0/)    
 [Let's Build a Compiler](https://compilers.iecc.com/crenshaw/)
 
+## To Be Fixed
+
+- Fail to bootstrap with gcc. (FIXED)
+
+- Only '*' can be used to declare an array; '[]' will not work. (NOT FIXED)
+
+- Classes and tokens declared in comments in the form '/** **/' will still be executed. (NOT FIXED)
+
+- ';' in a for loop will be interpreted as a separate statement. (NOT FIXED)
 
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
