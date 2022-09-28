@@ -101,19 +101,16 @@ Get the BSCP to your local machine:
 ```
 Try the following:
 ```bash
+  make
   bscp [-d] [filename].c [args to main]
 ```
 Refactoring and Testing:
 macOS || Linux
 ```bash
-  make
   ./compile ./test/greeting.c
   ./compile ./test/bscp.c ./test/greeting.c
 ``` 
 Windows
-```bash
-  make
-``` 
 Execute `Compile.exe`
 ```bash
 ./test/greeting.c
